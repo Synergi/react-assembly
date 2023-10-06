@@ -4,7 +4,6 @@
     "target": "ESNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "declaration": true,
-    "emitDeclarationOnly": true,
     "outDir": "./dist/types",
     "strict": true,
     "noUnusedLocals": true,
@@ -22,14 +21,16 @@
     "strictPropertyInitialization": false,
     "jsx": "preserve",
     "baseUrl": ".",
+    "types": [
+      "vitest/globals"
+    ],
     "paths": {
       "@/*": ["./src/*"],
       "@src/*": ["./src/*"]
     },
     "strictFunctionTypes": false
   },
-  "include": ["src/**/*.ts", "src/**/*.vue", "vite.config.*"],
+  "include": ["src/**/*.tsx", "src/**/*.ts", "vite.config.*"],
   "exclude": ["node_modules","dist"],
-  "extends": "",
   "references": [{ "path": "./tsconfig.node.json" }]
 }
