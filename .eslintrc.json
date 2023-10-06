@@ -4,13 +4,19 @@
     "plugin:import/errors",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:storybook/recommended",
     "prettier"
   ],
   "rules": {
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 0
   },
-  "plugins": ["react", "jest", "import", "jsx-a11y"],
+  "plugins": [
+    "react",
+    "jest",
+    "import",
+    "jsx-a11y"
+  ],
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module",
@@ -31,7 +37,12 @@
     },
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          "ts",
+          "tsx"
+        ]
       }
     }
   }
