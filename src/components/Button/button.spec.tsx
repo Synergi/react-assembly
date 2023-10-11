@@ -1,13 +1,13 @@
 import { beforeEach, describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import Button from './button';
+import { Button } from './index';
 
 const clickHandler = (e) => {
   e.stopPropagation();
   console.log(e.target);
-}
+};
 
-describe("button.tsx", () => {
+describe("Button.tsx", () => {
 
   beforeEach(() => {
     render(<Button
@@ -17,7 +17,8 @@ describe("button.tsx", () => {
       clicked={clickHandler}
       >Testing</Button>
     );
-  })
+  });
+
   test("Should show label", () => {
     expect(screen.getByText(/Testing/i)).toBeDefined();
   });

@@ -20,17 +20,17 @@
     "noImplicitAny": false,
     "strictPropertyInitialization": false,
     "jsx": "preserve",
-    "baseUrl": ".",
     "types": [
       "vitest/globals"
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@src/*": ["./src/*"]
+      "@/*": ["./src/*", "./dist/*", ""],
+      "@src/*": ["./src/*", "./dist/*", ""]
     },
     "strictFunctionTypes": false
   },
-  "include": ["src/**/*.tsx", "src/**/*.ts", "vite.config.*"],
+  "include": ["src", ".storybook", "src/**/*.tsx", "src/**/*.ts", "vite.config.*"],
   "exclude": ["node_modules","dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

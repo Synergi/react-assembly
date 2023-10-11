@@ -1,0 +1,13 @@
+.button-group {
+  button:first-of-type{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  button:nth-of-type{
+    border-radius: 0;
+  }
+  button:last-of-type{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

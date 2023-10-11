@@ -1,9 +1,9 @@
+// noinspection SyntaxError
+
 import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from './index';
 
-import Button from './button';
-
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-const meta = {
+const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
   parameters: {
@@ -13,7 +13,7 @@ const meta = {
   argTypes: {
     // backgroundColor: { control: 'color' },
   },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,8 +22,6 @@ const clickHandler = (e) => {
   e.preventDefault();
   console.log(e.target);
 }
-
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 
 export const Disabled: Story = {
   args: {
@@ -63,5 +61,16 @@ export const Default: Story = {
     classes: ['btn', 'btn-button'],
     children: 'Default Button',
     clicked: clickHandler,
+  },
+};
+
+export const Accessibility: Story = {
+  args: {
+    id: 'accessible-button',
+    type: 'button',
+    classes: ['button'],
+    children: 'Default Button',
+    clicked: clickHandler,
+    label: 'button accessible description'
   },
 };

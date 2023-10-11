@@ -43,6 +43,15 @@
           "ts",
           "tsx"
         ]
+      },
+      "alias": {
+        "extensions": [
+          ".js", ".ts", ".tsx", "scss"
+        ],
+        "map": [
+          ["@/", "./src/"],
+          ["@src/", "./src/"]
+        ]
       }
     }
   }

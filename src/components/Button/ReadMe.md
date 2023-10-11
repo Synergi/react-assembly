@@ -17,6 +17,8 @@
 | `clicked` |             | `Event<any>` |
 
 ```javascript
+import { Button } from 'react-assembly';
+
 <Button
       id="MyButton"
       type="submit"

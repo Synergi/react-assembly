@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import path from 'path';
 import react from '@vitejs/plugin-react';
 import checker from 'vite-plugin-checker';
 import basicSsl from '@vitejs/plugin-basic-ssl';
@@ -9,6 +10,12 @@ import { fileURLToPath, URL } from 'url';
 export default defineConfig({
   define: {
     'process.env': {},
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '@src': path.resolve(__dirname, './src'),
+    },
   },
   plugins: [
     react(),
